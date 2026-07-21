@@ -3,25 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Побутова техніка Баштанка</title>
+
+<title>Побутова Техніка Баштанка</title>
 
 <style>
-body{
+
+*{
 margin:0;
-background:#111;
+padding:0;
+box-sizing:border-box;
 font-family:Arial,sans-serif;
-color:#fff;
+}
+
+body{
+background:#111;
+color:white;
 }
 
 header{
 background:#000;
 padding:20px;
 text-align:center;
+position:sticky;
+top:0;
 }
 
 header h1{
-margin:0;
-font-size:32px;
+font-size:34px;
 }
 
 header span{
@@ -29,66 +37,103 @@ color:#FFD400;
 }
 
 .hero{
-padding:40px 20px;
+padding:60px 20px;
 text-align:center;
-background:#1a1a1a;
+background:#1c1c1c;
 }
 
 .hero h2{
-font-size:34px;
+font-size:40px;
 color:#FFD400;
+margin-bottom:20px;
 }
 
 .hero p{
-font-size:18px;
+font-size:20px;
+margin-bottom:25px;
 }
 
 .button{
 display:inline-block;
-margin-top:20px;
-padding:15px 30px;
+padding:15px 35px;
 background:#FFD400;
 color:#000;
 text-decoration:none;
 font-weight:bold;
-border-radius:10px;
+border-radius:12px;
 }
 
-.products{
+.categories{
+padding:30px 20px;
+}
+
+.categories h2{
+text-align:center;
+font-size:32px;
+margin-bottom:30px;
+color:#FFD400;
+}
+
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
-padding:20px;
 }
 
 .card{
 background:#222;
-padding:20px;
 border-radius:15px;
+padding:20px;
 text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card img{
 width:100%;
-border-radius:10px;
+border-radius:12px;
+height:180px;
+object-fit:cover;
+}
+
+.card h3{
+margin:15px 0;
+font-size:22px;
 }
 
 .price{
 font-size:24px;
 color:#FFD400;
-margin:10px 0;
+margin-bottom:15px;
 }
 
-.video{
-display:block;
-margin-top:10px;
-background:#ff0050;
-padding:12px;
-color:white;
+.buy{
+display:inline-block;
+padding:12px 22px;
+background:#FFD400;
+color:#000;
 text-decoration:none;
-border-radius:8px;
+border-radius:10px;
 font-weight:bold;
 }
+
+footer{
+margin-top:50px;
+background:#000;
+padding:30px;
+text-align:center;
+}
+
+footer a{
+color:#FFD400;
+text-decoration:none;
+display:block;
+margin:8px 0;
+}
+
 </style>
 
 </head>
@@ -96,41 +141,99 @@ font-weight:bold;
 <body>
 
 <header>
-<h1>Побутова <span>Техніка</span><br>Баштанка</h1>
+
+<h1>
+Побутова <span>Техніка</span><br>
+Баштанка
+</h1>
+
 </header>
 
 <section class="hero">
-<h2>Тільки нова техніка</h2>
-<p>Найкращі ціни • Гарантія • Швидка доставка</p>
 
-<a class="button" href="#">
-Переглянути каталог
+<h2>Нова побутова техніка</h2>
+
+<p>
+Гарантія • Доставка по Україні • Найкращі ціни
+</p>
+
+<a class="button" href="#catalog">
+Перейти до каталогу
 </a>
+
 </section>
 
-<section class="products">
+<section class="categories" id="catalog">
+
+<h2>Каталог товарів</h2>
+
+<div class="grid">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=600" alt="">
-<h3>Холодильник Samsung</h3>
-<div class="price">24 999 ₴</div>
 
-<a class="video" href="#">
-🎥 Відеоогляд TikTok
-</a>
+<img src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=600">
+
+<h3>🧊 Холодильники</h3>
+
+<div class="price">від 24 999 ₴</div>
+
+<a class="buy" href="#">Детальніше</a>
+
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600" alt="">
-<h3>Пральна машина LG</h3>
-<div class="price">18 499 ₴</div>
 
-<a class="video" href="#">
-🎥 Відеоогляд TikTok
-</a>
+<img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600">
+
+<h3>🧺 Пральні машини</h3>
+
+<div class="price">від 18 499 ₴</div>
+
+<a class="buy" href="#">Детальніше</a>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1586201375761-83865001e31b?w=600">
+
+<h3>🔥 Духові шафи</h3>
+
+<div class="price">від 13 999 ₴</div>
+
+<a class="buy" href="#">Детальніше</a>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=600">
+
+<h3>📺 Телевізори</h3>
+
+<div class="price">від 11 999 ₴</div>
+
+<a class="buy" href="#">Детальніше</a>
+
+</div>
+
 </div>
 
 </section>
+
+<footer>
+
+<h2>Побутова Техніка Баштанка</h2>
+
+<p>Телефон: +38 (0XX) XXX-XX-XX</p>
+
+<p>Email: info@example.com</p>
+
+<a href="#">TikTok</a>
+
+<a href="#">Instagram</a>
+
+</footer>
 
 </body>
 </html>

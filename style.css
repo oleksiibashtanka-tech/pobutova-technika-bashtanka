@@ -284,3 +284,113 @@ nav a:hover{
 .category-card:hover h3{
     color:#ffcc00;
 }
+
+/* ==========================
+   КОНТАКТИ
+========================== */
+
+.contacts{
+    padding:60px 0;
+}
+
+.contacts-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.contact-item{
+    background:#111;
+    border:1px solid #222;
+    border-radius:18px;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    transition:.3s;
+}
+
+.contact-item:hover{
+    border-color:#FFC107;
+    transform:translateY(-5px);
+}
+
+.contact-item img{
+    width:52px;
+    height:52px;
+    object-fit:contain;
+}
+
+.contact-item h4{
+    color:#FFC107;
+    font-size:20px;
+    margin-bottom:6px;
+}
+
+.contact-item p{
+    color:#ddd;
+    font-size:16px;
+}
+/* ==========================
+   НИЖНЄ МЕНЮ
+========================== */
+
+.bottom-nav{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    background:#000;
+
+    border-top:1px solid #222;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    padding:12px 0;
+
+    z-index:999;
+
+}
+
+.bottom-nav a{
+
+    color:#fff;
+
+    text-align:center;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+.bottom-nav span{
+
+    display:block;
+
+    font-size:24px;
+
+    margin-bottom:6px;
+
+}
+
+.bottom-nav a.active{
+
+    color:#FFC107;
+
+}
+
+.bottom-nav a:hover{
+
+    color:#FFC107;
+
+}

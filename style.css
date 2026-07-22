@@ -1,4 +1,4 @@
-/* Базові скидання та змінні */
+/* Базові налаштування */
 * {
     margin: 0;
     padding: 0;
@@ -7,17 +7,17 @@
 }
 
 :root {
-    --bg-black: #0d0d0d;
-    --card-bg: #141414;
+    --bg-black: #0a0a0a;
+    --card-bg: #141416;
     --accent-yellow: #ffcc00;
     --text-white: #ffffff;
-    --text-gray: #aaaaaa;
+    --text-gray: #8e8e93;
     --btn-bg: #1c1c1e;
     --btn-hover: #2c2c2e;
 }
 
 body {
-    background-color: var(--bg-black);
+    background-color: #000;
     color: var(--text-white);
     display: flex;
     justify-content: center;
@@ -26,7 +26,7 @@ body {
     overflow: hidden;
 }
 
-/* Контейнер під мобільний екран (100vh без скролу) */
+/* Контейнер картки */
 .card-container {
     width: 100%;
     max-width: 480px;
@@ -35,8 +35,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 12px 16px;
-    position: relative;
+    padding: 16px 20px;
 }
 
 /* Шапка */
@@ -44,35 +43,38 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #222;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #1c1c1e;
 }
 
 .logo-block {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
+/* Круглий жовтий маркер замість пустого кола */
 .logo-icon {
-    color: var(--accent-yellow);
-    font-size: 24px;
-    border: 2px solid var(--accent-yellow);
-    padding: 6px;
-    border-radius: 6px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent-yellow);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent-yellow);
 }
 
 .logo-text h1 {
     font-size: 11px;
-    letter-spacing: 1px;
-    color: var(--text-white);
+    font-weight: 700;
+    letter-spacing: 0.5px;
     line-height: 1.2;
+    color: #fff;
 }
 
 .logo-text h2 {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--accent-yellow);
     font-weight: 800;
+    letter-spacing: 0.5px;
 }
 
 .info-block {
@@ -82,145 +84,127 @@ body {
 .top-phone {
     color: var(--accent-yellow);
     text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
+    font-weight: 700;
+    font-size: 15px;
     display: block;
     margin-bottom: 2px;
-    transition: transform 0.2s;
-}
-
-.top-phone:hover {
-    transform: scale(1.03);
 }
 
 .work-time {
+    font-size: 10px;
+    color: var(--text-gray);
+    line-height: 1.3;
+}
+
+/* Головний банер (Додано стильний градієнт-сітку) */
+.hero-banner {
+    height: 20vh;
+    min-height: 130px;
+    background: linear-gradient(135deg, #1c1c1e 0%, #0a0a0a 100%);
+    border-radius: 16px;
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 4px;
-    font-size: 9px;
-    color: var(--text-gray);
-    line-height: 1.2;
-}
-
-.work-time i {
-    color: var(--accent-yellow);
-}
-
-/* Головний банер (Заміна картинки чистим CSS-колажем) */
-.hero-banner {
-    height: 22vh;
-    min-height: 120px;
-    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
-    border-radius: 8px;
-    position: relative;
+    padding: 24px;
+    border: 1px solid #2c2c2e;
     overflow: hidden;
-    display: flex;
-    align-items: flex-start;
-    padding: 15px;
-    box-shadow: inset 0 0 40px rgba(0,0,0,0.8);
-    border: 1px solid #222;
 }
 
-/* Симуляція силуетів техніки на фоні */
-.hero-banner::before {
+/* Ефект підсвічування з кута */
+.hero-banner::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    right: 10px;
-    width: 60%;
-    height: 75%;
-    background: url('https://unsplash.com') center bottom/cover no-repeat;
-    opacity: 0.25;
-    border-radius: 4px;
-    mask-image: linear-gradient(to top, rgba(0,0,0,1) 70%, rgba(0,0,0,0));
-    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 70%, rgba(0,0,0,0));
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,204,0,0.15) 0%, transparent 70%);
+    pointer-events: none;
 }
 
 .banner-overlay h3 {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 800;
     text-transform: uppercase;
     line-height: 1.3;
+    letter-spacing: 0.5px;
 }
 
 .banner-overlay .highlight {
     color: var(--accent-yellow);
 }
 
-/* Переваги */
+/* Переваги (Фікс різної висоти карток) */
 .features {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
-    margin: 4px 0;
+    gap: 8px;
 }
 
 .feature-item {
     background-color: var(--card-bg);
-    border: 1px solid #1f1f1f;
-    padding: 8px 4px;
-    border-radius: 8px;
+    border: 1px solid #1c1c1e;
+    padding: 10px 4px;
+    border-radius: 10px;
     text-align: center;
-    transition: transform 0.2s;
-}
-
-.feature-item:hover {
-    transform: translateY(-2px);
-    border-color: var(--accent-yellow);
-}
-
-.feature-icon {
-    color: var(--accent-yellow);
-    font-size: 16px;
-    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px; /* Однакове вирівнювання */
 }
 
 .feature-item p {
-    font-size: 9px;
-    color: var(--text-white);
+    font-size: 10px;
+    color: #efeff4;
     font-weight: 500;
     line-height: 1.2;
 }
 
-/* Контакти та Кнопки */
+/* Блок зв'язку */
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 .contacts h4 {
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
-    margin-bottom: 10px;
+    color: #fff;
 }
 
 .links-list {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin-bottom: 10px;
 }
 
+/* Кнопки зв'язку з іконками */
 .contact-btn {
     display: flex;
     align-items: center;
     background-color: var(--btn-bg);
     text-decoration: none;
-    padding: 10px 14px;
-    border-radius: 10px;
-    transition: all 0.25s ease;
-    border: 1px solid transparent;
+    padding: 12px 16px;
+    border-radius: 12px;
+    transition: background-color 0.2s, transform 0.1s;
 }
 
-.contact-btn:hover {
-    background-color: var(--btn-hover);
-    transform: translateX(4px);
+.contact-btn:active {
+    transform: scale(0.98);
 }
 
 .btn-icon {
     font-size: 20px;
-    width: 32px;
+    width: 28px;
+    margin-right: 12px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
+/* Кольорові акценти для іконок як у макеті */
 .viber-btn .btn-icon { color: #735F96; }
 .telegram-btn .btn-icon { color: #229ED9; }
 .phone-btn .btn-icon { color: #4CD964; }
@@ -228,69 +212,49 @@ body {
 
 .btn-text {
     flex-grow: 1;
-    padding-left: 6px;
     display: flex;
     flex-direction: column;
 }
 
 .btn-title {
     color: var(--text-white);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
 }
 
 .btn-subtitle {
     color: var(--text-gray);
     font-size: 11px;
-    margin-top: 1px;
+    margin-top: 2px;
 }
 
-.btn-arrow, .tiktok-arrow {
-    color: #444;
-    font-size: 12px;
-    transition: color 0.2s;
-}
-
-.contact-btn:hover .btn-arrow {
-    color: var(--text-white);
-}
-
-/* Головна кнопка ТікТок */
+/* Велика головна кнопка TikTok */
 .tiktok-main-btn {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: var(--accent-yellow);
     color: #000;
     text-decoration: none;
-    padding: 12px 16px;
-    border-radius: 12px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.2);
+    padding: 14px 20px;
+    border-radius: 16px;
+    transition: transform 0.1s;
 }
 
-.tiktok-main-btn:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 20px rgba(255, 204, 0, 0.4);
-}
-
-.tiktok-content {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.tiktok-main-btn:active {
+    transform: scale(0.98);
 }
 
 .tiktok-icon-badge {
     background-color: #000;
-    color: var(--accent-yellow);
-    width: 32px;
-    height: 32px;
+    color: #fff;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 18px;
+    margin-right: 14px;
 }
 
 .tiktok-text {
@@ -299,17 +263,14 @@ body {
 }
 
 .tiktok-title {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
 }
 
 .tiktok-subtitle {
-    font-size: 10px;
-    opacity: 0.8;
-}
-
-.tiktok-arrow i {
-    color: #000;
+    font-size: 11px;
+    font-weight: 500;
+    opacity: 0.7;
 }
 
 /* Підвал */
@@ -317,27 +278,16 @@ body {
     text-align: center;
     font-size: 10px;
     color: var(--text-gray);
-    padding-top: 6px;
-    border-top: 1px solid #1a1a1a;
+    padding-top: 8px;
+    border-top: 1px solid #1c1c1e;
 }
 
-.thanks {
-    margin-bottom: 2px;
-}
-
-.thanks i {
-    color: var(--accent-yellow);
-}
-
-/* Адаптація для великих екранів (ПК) */
+/* Для ПК версії */
 @media (min-width: 481px) {
-    body {
-        background-color: #000;
-    }
     .card-container {
         height: 850px;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-        border: 1px solid #222;
+        border-radius: 24px;
+        border: 1px solid #1c1c1e;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
     }
 }

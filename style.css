@@ -1,0 +1,343 @@
+/* Базові скидання та змінні */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+:root {
+    --bg-black: #0d0d0d;
+    --card-bg: #141414;
+    --accent-yellow: #ffcc00;
+    --text-white: #ffffff;
+    --text-gray: #aaaaaa;
+    --btn-bg: #1c1c1e;
+    --btn-hover: #2c2c2e;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Контейнер під мобільний екран (100vh без скролу) */
+.card-container {
+    width: 100%;
+    max-width: 480px;
+    height: 100vh;
+    background-color: var(--bg-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px 16px;
+    position: relative;
+}
+
+/* Шапка */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #222;
+}
+
+.logo-block {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    color: var(--accent-yellow);
+    font-size: 24px;
+    border: 2px solid var(--accent-yellow);
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.logo-text h1 {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--text-white);
+    line-height: 1.2;
+}
+
+.logo-text h2 {
+    font-size: 13px;
+    color: var(--accent-yellow);
+    font-weight: 800;
+}
+
+.info-block {
+    text-align: right;
+}
+
+.top-phone {
+    color: var(--accent-yellow);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 2px;
+    transition: transform 0.2s;
+}
+
+.top-phone:hover {
+    transform: scale(1.03);
+}
+
+.work-time {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    font-size: 9px;
+    color: var(--text-gray);
+    line-height: 1.2;
+}
+
+.work-time i {
+    color: var(--accent-yellow);
+}
+
+/* Головний банер (Заміна картинки чистим CSS-колажем) */
+.hero-banner {
+    height: 22vh;
+    min-height: 120px;
+    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.8);
+    border: 1px solid #222;
+}
+
+/* Симуляція силуетів техніки на фоні */
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    width: 60%;
+    height: 75%;
+    background: url('https://unsplash.com') center bottom/cover no-repeat;
+    opacity: 0.25;
+    border-radius: 4px;
+    mask-image: linear-gradient(to top, rgba(0,0,0,1) 70%, rgba(0,0,0,0));
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 70%, rgba(0,0,0,0));
+}
+
+.banner-overlay h3 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+.banner-overlay .highlight {
+    color: var(--accent-yellow);
+}
+
+/* Переваги */
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    margin: 4px 0;
+}
+
+.feature-item {
+    background-color: var(--card-bg);
+    border: 1px solid #1f1f1f;
+    padding: 8px 4px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.feature-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-yellow);
+}
+
+.feature-icon {
+    color: var(--accent-yellow);
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.feature-item p {
+    font-size: 9px;
+    color: var(--text-white);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* Контакти та Кнопки */
+.contacts h4 {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    background-color: var(--btn-bg);
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+}
+
+.contact-btn:hover {
+    background-color: var(--btn-hover);
+    transform: translateX(4px);
+}
+
+.btn-icon {
+    font-size: 20px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.viber-btn .btn-icon { color: #735F96; }
+.telegram-btn .btn-icon { color: #229ED9; }
+.phone-btn .btn-icon { color: #4CD964; }
+.geo-btn .btn-icon { color: #FF3B30; }
+
+.btn-text {
+    flex-grow: 1;
+    padding-left: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-title {
+    color: var(--text-white);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.btn-subtitle {
+    color: var(--text-gray);
+    font-size: 11px;
+    margin-top: 1px;
+}
+
+.btn-arrow, .tiktok-arrow {
+    color: #444;
+    font-size: 12px;
+    transition: color 0.2s;
+}
+
+.contact-btn:hover .btn-arrow {
+    color: var(--text-white);
+}
+
+/* Головна кнопка ТікТок */
+.tiktok-main-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--accent-yellow);
+    color: #000;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.2);
+}
+
+.tiktok-main-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(255, 204, 0, 0.4);
+}
+
+.tiktok-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tiktok-icon-badge {
+    background-color: #000;
+    color: var(--accent-yellow);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.tiktok-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.tiktok-title {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.tiktok-subtitle {
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+.tiktok-arrow i {
+    color: #000;
+}
+
+/* Підвал */
+.footer {
+    text-align: center;
+    font-size: 10px;
+    color: var(--text-gray);
+    padding-top: 6px;
+    border-top: 1px solid #1a1a1a;
+}
+
+.thanks {
+    margin-bottom: 2px;
+}
+
+.thanks i {
+    color: var(--accent-yellow);
+}
+
+/* Адаптація для великих екранів (ПК) */
+@media (min-width: 481px) {
+    body {
+        background-color: #000;
+    }
+    .card-container {
+        height: 850px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+        border: 1px solid #222;
+    }
+}

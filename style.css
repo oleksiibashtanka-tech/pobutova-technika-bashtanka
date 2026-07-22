@@ -1,4 +1,3 @@
-/* Базові налаштування */
 * {
     margin: 0;
     padding: 0;
@@ -7,13 +6,12 @@
 }
 
 :root {
-    --bg-black: #0a0a0a;
+    --bg-black: #0d0d0d;
     --card-bg: #141416;
     --accent-yellow: #ffcc00;
     --text-white: #ffffff;
     --text-gray: #8e8e93;
     --btn-bg: #1c1c1e;
-    --btn-hover: #2c2c2e;
 }
 
 body {
@@ -26,7 +24,6 @@ body {
     overflow: hidden;
 }
 
-/* Контейнер картки */
 .card-container {
     width: 100%;
     max-width: 480px;
@@ -53,28 +50,25 @@ body {
     gap: 10px;
 }
 
-/* Круглий жовтий маркер замість пустого кола */
 .logo-icon {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     background-color: var(--accent-yellow);
     border-radius: 50%;
-    box-shadow: 0 0 10px var(--accent-yellow);
+    box-shadow: 0 0 12px var(--accent-yellow);
 }
 
 .logo-text h1 {
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.5px;
     line-height: 1.2;
-    color: #fff;
+    letter-spacing: 0.5px;
 }
 
 .logo-text h2 {
     font-size: 14px;
     color: var(--accent-yellow);
     font-weight: 800;
-    letter-spacing: 0.5px;
 }
 
 .info-block {
@@ -87,39 +81,31 @@ body {
     font-weight: 700;
     font-size: 15px;
     display: block;
-    margin-bottom: 2px;
 }
 
 .work-time {
     font-size: 10px;
     color: var(--text-gray);
-    line-height: 1.3;
+    margin-top: 2px;
 }
 
-/* Головний банер (Додано стильний градієнт-сітку) */
+/* Головний банер + Силуети холодильника та пралки */
 .hero-banner {
-    height: 20vh;
-    min-height: 130px;
-    background: linear-gradient(135deg, #1c1c1e 0%, #0a0a0a 100%);
+    height: 22vh;
+    min-height: 140px;
+    background: linear-gradient(135deg, #1e1e20 0%, #0d0d0d 100%);
     border-radius: 16px;
     position: relative;
     display: flex;
     align-items: center;
     padding: 24px;
-    border: 1px solid #2c2c2e;
+    border: 1px solid #222;
     overflow: hidden;
 }
 
-/* Ефект підсвічування з кута */
-.hero-banner::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(255,204,0,0.15) 0%, transparent 70%);
-    pointer-events: none;
+.banner-overlay {
+    position: relative;
+    z-index: 2;
 }
 
 .banner-overlay h3 {
@@ -127,14 +113,82 @@ body {
     font-weight: 800;
     text-transform: uppercase;
     line-height: 1.3;
-    letter-spacing: 0.5px;
 }
 
 .banner-overlay .highlight {
     color: var(--accent-yellow);
 }
 
-/* Переваги (Фікс різної висоти карток) */
+/* Векторна графіка техніки кодом CSS */
+.appliances-vector {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    width: 120px;
+    height: 90%;
+    opacity: 0.15; /* Легкий стильний силует на фоні */
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Код холодильника */
+.fridge {
+    width: 45px;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+}
+
+.fridge-line {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0d0d0d;
+}
+
+.fridge-handle-1, .fridge-handle-2 {
+    position: absolute;
+    left: 4px;
+    width: 3px;
+    background-color: #0d0d0d;
+}
+
+.fridge-handle-1 { height: 15px; top: 20%; }
+.fridge-handle-2 { height: 20px; top: 45%; }
+
+/* Код пральної машини */
+.washer {
+    width: 50px;
+    height: 65%;
+    background-color: #fff;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    padding: 6px;
+}
+
+.washer-panel {
+    width: 100%;
+    height: 6px;
+    background-color: #0d0d0d;
+    border-radius: 1px;
+    margin-bottom: 8px;
+}
+
+.washer-window {
+    width: 26px;
+    height: 26px;
+    border: 4px solid #0d0d0d;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+/* Переваги */
 .features {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -150,17 +204,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 54px; /* Однакове вирівнювання */
+    min-height: 56px;
 }
 
 .feature-item p {
     font-size: 10px;
-    color: #efeff4;
+    color: #fff;
     font-weight: 500;
     line-height: 1.2;
 }
 
-/* Блок зв'язку */
+/* Контакти */
 .contacts {
     display: flex;
     flex-direction: column;
@@ -171,7 +225,6 @@ body {
     text-align: center;
     font-size: 16px;
     font-weight: 600;
-    color: #fff;
 }
 
 .links-list {
@@ -180,7 +233,6 @@ body {
     gap: 8px;
 }
 
-/* Кнопки зв'язку з іконками */
 .contact-btn {
     display: flex;
     align-items: center;
@@ -188,23 +240,17 @@ body {
     text-decoration: none;
     padding: 12px 16px;
     border-radius: 12px;
-    transition: background-color 0.2s, transform 0.1s;
-}
-
-.contact-btn:active {
-    transform: scale(0.98);
 }
 
 .btn-icon {
-    font-size: 20px;
-    width: 28px;
-    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+    margin-right: 14px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-/* Кольорові акценти для іконок як у макеті */
 .viber-btn .btn-icon { color: #735F96; }
 .telegram-btn .btn-icon { color: #229ED9; }
 .phone-btn .btn-icon { color: #4CD964; }
@@ -228,7 +274,12 @@ body {
     margin-top: 2px;
 }
 
-/* Велика головна кнопка TikTok */
+.btn-arrow, .tiktok-arrow {
+    color: #444;
+    font-size: 14px;
+}
+
+/* TikTok велика кнопка */
 .tiktok-main-btn {
     display: flex;
     align-items: center;
@@ -237,23 +288,23 @@ body {
     text-decoration: none;
     padding: 14px 20px;
     border-radius: 16px;
-    transition: transform 0.1s;
 }
 
-.tiktok-main-btn:active {
-    transform: scale(0.98);
+.tiktok-content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .tiktok-icon-badge {
     background-color: #000;
     color: #fff;
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
     margin-right: 14px;
 }
 
@@ -269,8 +320,12 @@ body {
 
 .tiktok-subtitle {
     font-size: 11px;
-    font-weight: 500;
-    opacity: 0.7;
+    opacity: 0.8;
+}
+
+.tiktok-arrow {
+    color: #000;
+    font-weight: bold;
 }
 
 /* Підвал */
@@ -282,12 +337,16 @@ body {
     border-top: 1px solid #1c1c1e;
 }
 
-/* Для ПК версії */
+.thanks {
+    margin-bottom: 2px;
+    color: var(--accent-yellow);
+}
+
 @media (min-width: 481px) {
     .card-container {
         height: 850px;
         border-radius: 24px;
-        border: 1px solid #1c1c1e;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        border: 1px solid #222;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.6);
     }
 }

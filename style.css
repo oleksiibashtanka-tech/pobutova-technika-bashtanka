@@ -5,286 +5,224 @@
 }
 
 body{
-    font-family:'Montserrat',sans-serif;
     background:#0f0f10;
+    font-family:'Montserrat',sans-serif;
     color:#fff;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
 }
 
 .container{
     width:100%;
-    max-width:1200px;
-    height:95vh;
+    max-width:430px;
+    margin:0 auto;
     background:#181818;
-    border-radius:30px;
-    overflow:hidden;
-    box-shadow:0 15px 50px rgba(0,0,0,.45);
-    display:flex;
-    flex-direction:column;
+    min-height:100vh;
 }
 
 header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:28px 40px;
+    padding:20px;
     background:#111;
+    border-bottom:1px solid #2a2a2a;
 }
 
-.logo h1{
-    font-size:18px;
-    color:#FFD54A;
+.logo-top{
+    color:#FFC107;
+    font-size:13px;
+    font-weight:700;
     letter-spacing:2px;
 }
 
-.logo h2{
-    margin-top:5px;
-    font-size:34px;
+header h1{
+    margin-top:4px;
+    font-size:30px;
     font-weight:800;
 }
 
 .phone{
-    display:flex;
-    align-items:center;
-    gap:15px;
+    text-align:right;
 }
 
-.phone i{
-    font-size:30px;
-    color:#FFD54A;
-}
-
-.phone h3{
+.number{
     font-size:22px;
+    font-weight:700;
 }
 
-.phone p{
-    color:#bdbdbd;
-    font-size:13px;
+.time{
+    color:#FFC107;
+    font-weight:700;
 }
 
 .hero{
-    flex:1;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:40px;
-    gap:40px;
+    padding:25px 20px;
 }
 
-.hero-text{
-    width:50%;
+.hero h2{
+    font-size:34px;
+    line-height:1.15;
+    margin-bottom:15px;
 }
 
-.hero-text h4{
-    color:#FFD54A;
-    font-size:18px;
-    margin-bottom:10px;
+.hero h2 span{
+    color:#FFC107;
 }
 
-.hero-text h2{
-    font-size:52px;
-    line-height:1.1;
-    margin-bottom:20px;
-}
-
-.hero-text p{
-    color:#d7d7d7;
-    line-height:1.8;
+.hero p{
+    color:#cfcfcf;
+    line-height:1.7;
     margin-bottom:25px;
 }
 
-.hero-text ul{
-    list-style:none;
+.advantages{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
 }
 
-.hero-text li{
-    margin:12px 0;
-    font-size:17px;
+.advantages div{
+    background:#232323;
+    border-radius:14px;
+    padding:16px;
+    text-align:center;
+    font-size:14px;
+    font-weight:600;
+    border:1px solid #303030;
 }
 
-.hero-text li i{
-    color:#FFD54A;
-    margin-right:12px;
-}
-
-.hero-image{
-    width:50%;
-    display:flex;
-    justify-content:center;
-}
-
-.hero-image img{
-    width:100%;
-    max-width:520px;
-    border-radius:25px;
+.advantages i{
+    display:block;
+    color:#FFC107;
+    font-size:24px;
+    margin-bottom:10px;
 }
 
 .about{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:30px 40px;
-    background:#141414;
+    padding:20px;
 }
 
-.about-text{
-    width:70%;
-}
-
-.about-text h2{
-    color:#FFD54A;
+.about h3{
+    color:#FFC107;
+    font-size:28px;
     margin-bottom:15px;
-    font-size:30px;
 }
 
-.about-text p{
-    color:#d5d5d5;
-    line-height:1.7;
-    margin-bottom:10px;
+.about p{
+    color:#d6d6d6;
+    line-height:1.8;
+    margin-bottom:12px;
 }
 
-.about-image img{
-    width:120px;
-    border-radius:20px;
-}
-.contacts{
-    padding:30px 40px 40px;
-}
-
-.contacts h2{
-    text-align:center;
-    color:#FFD54A;
-    font-size:30px;
-    margin-bottom:25px;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-    margin-bottom:25px;
-}
-
-.contact-card{
-    background:#202020;
-    border-radius:18px;
-    padding:18px;
-    display:flex;
-    align-items:center;
-    gap:15px;
-    transition:.3s;
-    cursor:pointer;
-    border:1px solid #2d2d2d;
-}
-
-.contact-card:hover{
-    transform:translateY(-4px);
-    border-color:#FFD54A;
-    box-shadow:0 10px 25px rgba(255,213,74,.2);
-}
-
-.contact-card i{
-    font-size:30px;
-    color:#FFD54A;
-    width:40px;
-    text-align:center;
-}
-
-.contact-card h3{
-    font-size:18px;
-    margin-bottom:4px;
-}
-
-.contact-card p{
-    color:#cfcfcf;
-    font-size:14px;
-}
-
-.tiktok-button{
-    display:block;
-    width:320px;
-    margin:0 auto;
-    text-align:center;
-    text-decoration:none;
-    background:#FFD54A;
-    color:#111;
-    font-size:18px;
-    font-weight:700;
-    padding:18px;
-    border-radius:16px;
-    transition:.3s;
-}
-
-.tiktok-button:hover{
-    background:#ffca1c;
-    transform:scale(1.03);
-}
-
-footer{
-    text-align:center;
-    margin-top:25px;
-    color:#999;
-    font-size:14px;
-}
-
-footer p{
-    color:#fff;
-    margin-bottom:6px;
-}
-
-@media (max-width:900px){
-
-.container{
-    height:auto;
-    border-radius:0;
-}
-
-header,
-.hero,
-.about,
 .contacts{
     padding:20px;
 }
 
-.hero{
+.contacts h3{
+    font-size:28px;
+    color:#FFC107;
+    margin-bottom:20px;
+}
+
+.card{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    background:#232323;
+    border:1px solid #303030;
+    border-radius:18px;
+    padding:16px;
+    margin-bottom:14px;
+    text-decoration:none;
+    color:#fff;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+    border-color:#FFC107;
+    box-shadow:0 8px 20px rgba(255,193,7,.15);
+}
+
+.card i{
+    width:52px;
+    height:52px;
+    border-radius:14px;
+    background:#FFC107;
+    color:#111;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    flex-shrink:0;
+}
+
+.card div{
+    display:flex;
     flex-direction:column;
+}
+
+.card b{
+    font-size:18px;
+    margin-bottom:4px;
+}
+
+.card span{
+    color:#cfcfcf;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.tiktok{
+    margin:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    background:#FFC107;
+    color:#111;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:700;
+    border-radius:18px;
+    padding:18px;
+    transition:.25s;
+}
+
+.tiktok:hover{
+    transform:scale(1.02);
+}
+
+.tiktok i{
+    font-size:26px;
+}
+
+footer{
     text-align:center;
+    color:#888;
+    font-size:13px;
+    padding:20px 20px 30px;
 }
 
-.hero-text,
-.hero-image,
-.about-text{
-    width:100%;
+@media (max-width:380px){
+
+header h1{
+    font-size:25px;
 }
 
-.hero-text h2{
-    font-size:38px;
+.hero h2{
+    font-size:30px;
 }
 
-.hero-image img{
-    max-width:340px;
+.number{
+    font-size:19px;
 }
 
-.about{
-    flex-direction:column;
-    text-align:center;
-    gap:20px;
-}
-
-.contact-grid{
+.advantages{
     grid-template-columns:1fr;
 }
 
-.phone{
-    display:none;
-}
-
-.tiktok-button{
-    width:100%;
+.card b{
+    font-size:16px;
 }
 
 }

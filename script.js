@@ -1,30 +1,22 @@
-// Плавна анімація появи карток
-const cards = document.querySelectorAll('.card, .item, .tiktok');
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // Блокування випадкових системних жестів масштабування на iOS при подвійному тапі
+    document.addEventListener('touchstart', (event) => {
+        if (event.touches.length > 1) {
+            event.preventDefault();
         }
-    });
-}, {
-    threshold: 0.15
-});
+    }, { passive: false });
 
-cards.forEach(card => {
-    card.style.opacity = "0";
-    card.style.transform = "translateY(30px)";
-    card.style.transition = "0.6s ease";
-    observer.observe(card);
-});
-
-// Ефект натискання
-document.querySelectorAll('.item, .tiktok').forEach(button => {
-    button.addEventListener('click', () => {
-        button.style.transform = "scale(0.97)";
-        setTimeout(() => {
-            button.style.transform = "";
-        }, 120);
+    // Додаємо легкий тактильний ефект занурення під час кліків на інтерактивні елементи (для мобільних)
+    const actionButtons = document.querySelectorAll('.link-item, .tiktok-btn, .phone-top');
+    
+    actionButtons.forEach(button => {
+        button.addEventListener('touchstart', () => {
+            button.style.transform = 'scale(0.98)';
+        });
+        
+        button.addEventListener('touchend', () => {
+            button.style.transform = 'none';
+        });
     });
 });

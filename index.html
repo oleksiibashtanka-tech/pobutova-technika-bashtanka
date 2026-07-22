@@ -3,18 +3,208 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Побутова Техніка Баштанка</title>
-
-<link rel="stylesheet" href="style.css">
+<title>Побутова техніка Баштанка</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
+
+body{
+background:#111;
+color:#fff;
+}
+
+.container{
+max-width:430px;
+margin:auto;
+background:#181818;
+min-height:100vh;
+}
+
+header{
+background:#000;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo h1{
+font-size:18px;
+font-weight:800;
+color:#fff;
+line-height:1.1;
+}
+
+.logo span{
+color:#FFC107;
+}
+
+.phone{
+text-align:right;
+}
+
+.phone a{
+color:#fff;
+font-size:26px;
+text-decoration:none;
+font-weight:700;
+}
+
+.phone p{
+color:#ddd;
+font-size:13px;
+margin-top:4px;
+}
+
+.phone b{
+color:#FFC107;
+}
+
+.hero img{
+width:100%;
+display:block;
+}
+
+.hero-text{
+padding:25px;
+}
+
+.hero-text h2{
+font-size:38px;
+font-weight:800;
+line-height:1.1;
+margin-bottom:15px;
+}
+
+.hero-text h2 span{
+color:#FFC107;
+}
+
+.hero-text p{
+font-size:17px;
+color:#ddd;
+line-height:1.7;
+margin-bottom:20px;
+}
+
+.features{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+.feature{
+background:#222;
+border-radius:15px;
+padding:18px;
+text-align:center;
+}
+
+.feature i{
+font-size:28px;
+color:#FFC107;
+margin-bottom:12px;
+}
+
+.feature h3{
+font-size:15px;
+font-weight:700;
+}
+
+.about{
+padding:25px;
+}
+
+.about h2{
+font-size:34px;
+color:#FFC107;
+margin-bottom:18px;
+}
+
+.about p{
+color:#ddd;
+line-height:1.8;
+margin-bottom:15px;
+}
+
+.contacts{
+padding:25px;
+}
+
+.contacts h2{
+font-size:34px;
+color:#FFC107;
+margin-bottom:20px;
+}
+
+.card{
+display:flex;
+align-items:center;
+background:#222;
+border-radius:18px;
+padding:18px;
+margin-bottom:15px;
+text-decoration:none;
+color:#fff;
+transition:.3s;
+}
+
+.card:hover{
+background:#2b2b2b;
+}
+
+.card i{
+width:55px;
+height:55px;
+border-radius:50%;
+background:#FFC107;
+color:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+margin-right:18px;
+}
+
+.card h3{
+font-size:22px;
+margin-bottom:4px;
+}
+
+.card p{
+color:#ccc;
+font-size:15px;
+}
+
+.tiktok{
+background:#FFC107;
+color:#000;
+font-weight:800;
+justify-content:center;
+font-size:22px;
+}
+
+footer{
+padding:25px;
+text-align:center;
+color:#888;
+font-size:14px;
+}
+
+</style>
 </head>
 
 <body>
@@ -24,72 +214,54 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <header>
 
 <div class="logo">
-
-<h1>ПОБУТОВА ТЕХНІКА</h1>
-
-<h2>БАШТАНКА</h2>
-
+<h1>ПОБУТОВА ТЕХНІКА<br><span>БАШТАНКА</span></h1>
 </div>
 
 <div class="phone">
-
-<i class="fa-solid fa-phone"></i>
-
-<div>
-
-<h3>098 050 38 85</h3>
-
-<p>Працюємо щодня<br>08:00 - 18:00</p>
-
-</div>
-
+<a href="tel:+380980503885">098 050 38 85</a>
+<p>Працюємо щодня<br><b>08:00–18:00</b></p>
 </div>
 
 </header>
-
 <section class="hero">
+
+<img src="hero.jpg" alt="Побутова техніка">
 
 <div class="hero-text">
 
-<h4>Якісна техніка</h4>
-
-<h2>ДЛЯ ВАШОГО ДОМУ</h2>
+<h2>
+Якісна техніка<br>
+<span>для вашого дому</span>
+</h2>
 
 <p>
-
-Широкий вибір нової побутової техніки від перевірених виробників.
-
+Широкий вибір нової побутової техніки
+від перевірених виробників.
 </p>
 
-<ul>
+<div class="features">
 
-<li>
+<div class="feature">
 <i class="fa-solid fa-circle-check"></i>
-Лише нова техніка
-</li>
-
-<li>
-<i class="fa-solid fa-shield-halved"></i>
-Офіційна гарантія
-</li>
-
-<li>
-<i class="fa-solid fa-truck-fast"></i>
-Швидка доставка
-</li>
-
-<li>
-<i class="fa-solid fa-tags"></i>
-Вигідні ціни
-</li>
-
-</ul>
-
+<h3>Лише нова техніка</h3>
 </div>
 
-<div class="hero-image">
+<div class="feature">
+<i class="fa-solid fa-shield-halved"></i>
+<h3>Офіційна гарантія</h3>
+</div>
 
-<img src="images/hero.png" alt="Побутова техніка">
+<div class="feature">
+<i class="fa-solid fa-truck-fast"></i>
+<h3>Швидка доставка</h3>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-tags"></i>
+<h3>Вигідні ціни</h3>
+</div>
+
+</div>
 
 </div>
 
@@ -97,35 +269,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <section class="about">
 
-<div class="about-text">
-
 <h2>Про магазин</h2>
 
 <p>
-
-Магазин «Побутова Техніка Баштанка» пропонує широкий вибір нової побутової техніки.
-
+Магазин «Побутова техніка Баштанка» пропонує широкий вибір нової побутової техніки.
 </p>
 
 <p>
-
-Усі актуальні товари, новинки та відеоогляди дивіться у нашому TikTok.
-
+Усі актуальні товари, відеоогляди та нові надходження дивіться у нашому TikTok.
 </p>
 
 <p>
-
 Якщо потрібна консультація — просто оберіть зручний спосіб зв'язку нижче.
-
 </p>
-
-</div>
-
-<div class="about-image">
-
-<img src="images/logo.png" alt="Логотип">
-
-</div>
 
 </section>
 
@@ -133,73 +289,34 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <h2>Як з нами зв'язатися</h2>
 
-<div class="contact-grid">
-  <div class="contact-card viber">
-    <i class="fa-brands fa-viber"></i>
-    <div>
-        <h3>Viber</h3>
-        <p>Написати у Viber</p>
-    </div>
+<a class="card" href="viber://chat?number=%2B380980503885">
+<i class="fa-brands fa-viber"></i>
+<div>
+<h3>Viber</h3>
+<p>Написати у Viber</p>
 </div>
-
-<div class="contact-card telegram">
-    <i class="fa-brands fa-telegram"></i>
-    <div>
-        <h3>Telegram</h3>
-        <p>@technobashtanka</p>
-    </div>
-</div>
-
-<div class="contact-card phone-card">
-    <i class="fa-solid fa-phone"></i>
-    <div>
-        <h3>Телефон</h3>
-        <p>098 050 38 85</p>
-    </div>
-</div>
-
-<div class="contact-card tiktok">
-    <i class="fa-brands fa-tiktok"></i>
-    <div>
-        <h3>TikTok</h3>
-        <p>@technobashtanka</p>
-    </div>
-</div>
-
-<div class="contact-card address">
-    <i class="fa-solid fa-location-dot"></i>
-    <div>
-        <h3>Адреса магазину</h3>
-        <p>м. Баштанка</p>
-    </div>
-</div>
-
-<div class="contact-card schedule">
-    <i class="fa-regular fa-clock"></i>
-    <div>
-        <h3>Графік роботи</h3>
-        <p>Щодня 08:00–18:00</p>
-    </div>
-</div>
-
-</div>
-
-<a class="tiktok-button" href="#">
-    <i class="fa-brands fa-tiktok"></i>
-    Перейти в TikTok
 </a>
 
-<footer>
-
-<p>Дякуємо за довіру!</p>
-
-<span>© Побутова Техніка Баштанка</span>
-
-</footer>
-
-</section>
-
+<a class="card" href="https://t.me/+380980503885">
+<i class="fa-brands fa-telegram"></i>
+<div>
+<h3>Telegram</h3>
+<p>@technobashtanka</p>
 </div>
+</a>
 
-</body>
-</html>
+<a class="card" href="tel:+380980503885">
+<i class="fa-solid fa-phone"></i>
+<div>
+<h3>Телефон</h3>
+<p>098 050 38 85</p>
+</div>
+</a>
+
+<a class="card" href="https://www.tiktok.com/@technobashtanka">
+<i class="fa-brands fa-tiktok"></i>
+<div>
+<h3>TikTok</h3>
+<p>@technobashtanka</p>
+</div>
+</a>

@@ -5,124 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Побутова техніка Баштанка</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Підключення іконок Font Awesome для точного відтворення макета -->
-    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
     <div class="card-container">
         <!-- Шапка сайту -->
         <header class="header">
             <div class="logo-block">
-                <div class="logo-icon">
-                    <i class="fa-solid fa-kitchen-set"></i>
-                </div>
+                <div class="logo-icon"></div>
                 <div class="logo-text">
                     <h1>ПОБУТОВА<br>ТЕХНІКА</h1>
                     <h2>БАШТАНКА</h2>
                 </div>
             </div>
             <div class="info-block">
-                <a href="tel:+380980503885" class="top-phone">
-                    <i class="fa-solid fa-phone"></i> 098 050 38 85
-                </a>
+                <a href="tel:+380980503885" class="top-phone">098 050 38 85</a>
                 <div class="work-time">
-                    <i class="fa-regular fa-clock"></i>
                     <span>Працюємо щодня<br><strong>08:00–18:00</strong></span>
                 </div>
             </div>
         </header>
 
-        <!-- Головний банер -->
+        <!-- Головний банер із вбудованими CSS-силуетами техніки -->
         <main class="hero-banner">
             <div class="banner-overlay">
                 <h3>Якісна техніка<br><span class="highlight">для вашого дому</span></h3>
+            </div>
+            <!-- Графічні силуети техніки на коді -->
+            <div class="appliances-vector">
+                <div class="fridge">
+                    <div class="fridge-line"></div>
+                    <div class="fridge-handle-1"></div>
+                    <div class="fridge-handle-2"></div>
+                </div>
+                <div class="washer">
+                    <div class="washer-window"></div>
+                    <div class="washer-panel"></div>
+                </div>
             </div>
         </main>
 
         <!-- Блок переваг -->
         <section class="features">
-            <div class="feature-item">
-                <div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div>
-                <p>Лише нова техніка</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                <p>Офіційна гарантія</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
-                <p>Швидка доставка</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon"><i class="fa-solid fa-tags"></i></div>
-                <p>Вигідні ціни</p>
-            </div>
+            <div class="feature-item"><p>Лише нова техніка</p></div>
+            <div class="feature-item"><p>Офіційна гарантія</p></div>
+            <div class="feature-item"><p>Швидка доставка</p></div>
+            <div class="feature-item"><p>Вигідні ціни</p></div>
         </section>
 
-        <!-- Блок контактів -->
+        <!-- Блок контактів із вбудованими SVG іконками -->
         <section class="contacts">
             <h4>Як з нами зв'язатися</h4>
             
             <div class="links-list">
+                <!-- Viber -->
                 <a href="viber://chat?number=%2B380980503885" class="contact-btn viber-btn" target="_blank">
-                    <div class="btn-icon"><i class="fa-brands fa-viber"></i></div>
+                    <div class="btn-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.2 12c0-5.523-4.477-10-10-10S2.2 6.477 2.2 12c0 4.887 3.503 8.955 8.125 9.81V15.35H8.216v-3.35h2.109v-2.433c0-2.08 1.238-3.23 3.134-3.23.908 0 1.858.163 1.858.163v2.043h-1.047c-1.032 0-1.353.64-1.353 1.296v1.16h2.302l-.368 3.35h-1.934V21.81c4.622-.855 8.125-4.923 8.125-9.81z"/></svg>
+                    </div>
                     <div class="btn-text">
                         <span class="btn-title">Viber</span>
                         <span class="btn-subtitle">Написати у Viber</span>
                     </div>
-                    <div class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="btn-arrow">➔</div>
                 </a>
 
+                <!-- Telegram -->
                 <a href="https://t.me" class="contact-btn telegram-btn" target="_blank">
-                    <div class="btn-icon"><i class="fa-brands fa-telegram"></i></div>
+                    <div class="btn-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.7-2.48 2.75-2.7.01-.03.01-.14-.06-.2-.07-.06-.17-.04-.25-.02-.11.02-1.83 1.16-5.16 3.42-.49.34-.93.51-1.33.5-.44-.01-1.3-.25-1.93-.46-.78-.25-1.4-.39-1.35-.83.03-.23.34-.47.94-.72 3.69-1.61 6.15-2.67 7.39-3.17 3.51-1.44 4.24-1.69 4.72-1.7.1 0 .34.03.49.15.12.1.16.24.18.34.02.09.02.26 0 .4z"/></svg>
+                    </div>
                     <div class="btn-text">
                         <span class="btn-title">Telegram</span>
                         <span class="btn-subtitle">@technobashtanka</span>
                     </div>
-                    <div class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="btn-arrow">➔</div>
                 </a>
 
+                <!-- Телефон -->
                 <a href="tel:+380980503885" class="contact-btn phone-btn">
-                    <div class="btn-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="btn-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    </div>
                     <div class="btn-text">
                         <span class="btn-title">Телефон</span>
                         <span class="btn-subtitle">098 050 38 85</span>
                     </div>
-                    <div class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="btn-arrow">➔</div>
                 </a>
 
+                <!-- Адреса -->
                 <a href="https://google.com" class="contact-btn geo-btn" target="_blank">
-                    <div class="btn-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="btn-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-12-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </div>
                     <div class="btn-text">
                         <span class="btn-title">Адреса магазину</span>
                         <span class="btn-subtitle">м. Баштанка, вул. Промислова, 30А (біля ПТУ)</span>
                     </div>
-                    <div class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="btn-arrow">➔</div>
                 </a>
             </div>
 
-            <!-- Велика кнопка TikTok -->
+            <!-- TikTok велика кнопка -->
             <a href="https://tiktok.com" class="tiktok-main-btn" target="_blank">
                 <div class="tiktok-content">
                     <div class="tiktok-icon-badge">
-                        <i class="fa-brands fa-tiktok"></i>
+                        <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px; height:18px;"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.06-2.89-.52-4.06-1.37-.1-.07-.2-.15-.3-.23v6.33c0 1.13-.22 2.29-.75 3.28-1.22 2.37-3.9 3.82-6.57 3.65-2.45-.07-4.82-1.47-5.83-3.71-.97-2.11-.64-4.78.89-6.52 1.34-1.57 3.5-2.31 5.54-2.02v4.03c-1.07-.17-2.24.16-2.91 1.02-.68.84-.71 2.1-.11 2.97.57.85 1.64 1.28 2.64 1.13 1.05-.1 1.89-.98 2.01-2.03.03-1.63.01-8.91.01-10.53z"/></svg>
                     </div>
                     <div class="tiktok-text">
                         <span class="tiktok-title">Перейти у TikTok</span>
                         <span class="tiktok-subtitle">Усі товари та нові надходження</span>
                     </div>
                 </div>
-                <div class="tiktok-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="tiktok-arrow">➔</div>
             </a>
         </section>
 
         <!-- Підвал сайту -->
         <footer class="footer">
-            <p class="thanks"><i class="fa-regular fa-heart"></i> Дякуємо за довіру!</p>
+            <p class="thanks">❤ Дякуємо за довіру!</p>
             <p class="copyright">© 2026 Побутова техніка Баштанка</p>
         </footer>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

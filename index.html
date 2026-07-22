@@ -1,415 +1,281 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Побутова Техніка Баштанка</title>
 
-<title>Побутова Техніка Баштанка</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<style>
+    <link rel="stylesheet" href="style.css">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-font-family:'Montserrat',sans-serif;
-}
-
-body{
-background:#0f0f0f;
-color:#fff;
-}
-
-header{
-background:#000;
-padding:18px;
-position:sticky;
-top:0;
-z-index:999;
-box-shadow:0 2px 20px rgba(0,0,0,.5);
-}
-.navbar {
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-.navbar a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.navbar a:hover {
-    color: #ffc107;
-}
-.logo{
-text-align:center;
-font-size:32px;
-font-weight:800;
-line-height:1.15;
-}
-
-.logo span{
-color:#ffc107;
-}
-
-.hero{
-
-padding:35px 20px;
-
-text-align:center;
-
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
-url('https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&w=1200&q=80');
-
-background-size:cover;
-
-background-position:center;
-
-}
-
-.hero h1{
-
-font-size:38px;
-
-font-weight:800;
-
-color:#ffc107;
-
-margin-bottom:15px;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-color:#ddd;
-
-line-height:1.6;
-
-margin-bottom:25px;
-
-}
-
-.btn{
-
-display:inline-block;
-
-background:#ffc107;
-
-color:#000;
-
-padding:16px 34px;
-
-border-radius:15px;
-
-font-size:18px;
-
-font-weight:700;
-
-text-decoration:none;
-
-transition:.3s;
-
-}
-
-.btn:hover{
-
-transform:scale(1.05);
-
-}
-
-.section-title{
-
-text-align:center;
-
-font-size:34px;
-
-margin:40px 0 25px;
-
-color:#ffc107;
-
-font-weight:800;
-
-}
-
-.catalog{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:16px;
-
-padding:0 15px 30px;
-
-}
-
-.card{
-
-background:#1a1a1a;
-
-border-radius:18px;
-
-overflow:hidden;
-
-transition:.35s;
-
-}
-
-.card img{
-
-width:100%;
-
-height:130px;
-
-object-fit:cover;
-
-}
-
-.card h3{
-
-font-size:18px;
-
-padding-top:12px;
-
-text-align:center;
-
-}
-
-.price{
-
-color:#ffc107;
-
-font-size:22px;
-
-font-weight:700;
-
-text-align:center;
-
-margin:10px 0;
-
-}
-
-.card a{
-
-display:block;
-
-background:#ffc107;
-
-color:#000;
-
-margin:0 14px 16px;
-
-padding:12px;
-
-border-radius:12px;
-
-text-align:center;
-
-text-decoration:none;
-
-font-weight:700;
-
-}
-
-.info{
-
-padding:20px;
-
-}
-
-footer{
-
-background:#000;
-
-padding:35px 20px;
-
-text-align:center;
-
-margin-top:40px;
-
-}
-
-.contact{
-
-margin:12px 0;
-
-font-size:17px;
-
-}
-
-.contact a{
-
-color:#ffc107;
-
-text-decoration:none;
-
-}
-
-</style>
-
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
 <header>
 
-<div class="logo">
+    <div class="top-header">
 
-Побутова <span>Техніка</span><br>
+        <button class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
 
-Баштанка
+        <div class="logo">
 
-</div>
-<nav class="navbar">
-    <a href="#">Головна</a>
-    <a href="#catalog">Каталог</a>
-    <a href="#about">Про нас</a>
-    <a href="#contacts">Контакти</a>
-</nav>
+            <h1>
+                ПОБУТОВА
+                <span>ТЕХНІКА</span>
+            </h1>
+
+            <p>БАШТАНКА</p>
+
+        </div>
+
+        <div class="notification">
+
+            <i class="far fa-bell"></i>
+
+            <span>3</span>
+
+        </div>
+
+    </div>
+
+    <div class="advantages">
+
+        <div class="advantage">
+
+            <i class="far fa-star"></i>
+
+            <div>
+
+                <h3>НОВА ТЕХНІКА</h3>
+
+                <p>100%</p>
+
+            </div>
+
+        </div>
+
+        <div class="advantage">
+
+            <i class="fas fa-shield-alt"></i>
+
+            <div>
+
+                <h3>ОФІЦІЙНА</h3>
+
+                <p>ГАРАНТІЯ</p>
+
+            </div>
+
+        </div>
+
+        <div class="advantage">
+
+            <i class="fas fa-truck"></i>
+
+            <div>
+
+                <h3>ШВИДКА</h3>
+
+                <p>ДОСТАВКА</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </header>
 
+<main>
 <section class="hero">
 
-<h1>Нова побутова техніка</h1>
+    <div class="hero-content">
 
-<p>
+        <span class="hero-badge">
+            🔥 Найкращі пропозиції
+        </span>
 
-100% нова техніка • Гарантія • Швидка доставка
+        <h2>
+            Побутова техніка<br>
+            для вашого дому
+        </h2>
 
-</p>
+        <p>
+            Холодильники, пральні машини, телевізори,
+            пилососи та інша техніка за найкращими цінами.
+        </p>
 
-<a href="#catalog" class="btn">
+        <a href="#catalog" class="hero-button">
+            Переглянути каталог
+        </a>
 
-Переглянути каталог
+    </div>
 
-</a>
+    <div class="hero-image">
+
+        <img src="images/hero.png"
+             alt="Побутова техніка">
+
+    </div>
 
 </section>
+<section class="categories" id="catalog">
 
-<h2 class="section-title" id="catalog">
+    <div class="section-title">
 
-Категорії
+        <h2>Категорії</h2>
 
-</h2>
+    </div>
 
-<div class="catalog">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&w=600&q=80">
-<h3>🧊 Холодильники</h3>
-<div class="price">від 24 999 ₴</div>
-<a href="#">Переглянути</a>
-</div>
+    <div class="category-grid">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=600&q=80">
-<h3>🫧 Пральні машини</h3>
-<div class="price">від 15 999 ₴</div>
-<a href="#">Переглянути</a>
-</div>
+        <div class="category-card">
+            <img src="images/fridge.png">
+            <h3>Холодильники</h3>
+        </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=600&q=80">
-<h3>📺 Телевізори</h3>
-<div class="price">від 11 999 ₴</div>
-<a href="#">Переглянути</a>
-</div>
+        <div class="category-card">
+            <img src="images/washing.png">
+            <h3>Пральні машини</h3>
+        </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1586208958839-06c17cacdf08?auto=format&fit=crop&w=600&q=80">
-<h3>🔥 Духові шафи</h3>
-<div class="price">від 12 999 ₴</div>
-<a href="#">Переглянути</a>
-</div>
+        <div class="category-card">
+            <img src="images/tv.png">
+            <h3>Телевізори</h3>
+        </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=600&q=80">
-<h3>🍳 Варильні поверхні</h3>
-<div class="price">від 8 999 ₴</div>
-<a href="#">Переглянути</a>
-</div>
+        <div class="category-card">
+            <img src="images/vacuum.png">
+            <h3>Пилососи</h3>
+        </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=600&q=80">
-<h3>❄️ Кондиціонери</h3>
-<div class="price">від 18 999 ₴</div>
-<a href="#">Переглянути</a>
-</div>
-</div>
+        <div class="category-card">
+            <img src="images/microwave.png">
+            <h3>Мікрохвильові</h3>
+        </div>
 
-<h2 class="section-title">Нові надходження</h2>
+        <div class="category-card">
+            <img src="images/all.png">
+            <h3>Увесь каталог</h3>
+        </div>
 
-<div class="catalog">
+    </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1601944179066-29786cb9d32a?auto=format&fit=crop&w=600&q=80">
-<h3>Samsung 55"</h3>
-<div class="price">27 999 ₴</div>
-<a href="#">Купити</a>
-</div>
+</section>
+<section class="products">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=600&q=80">
-<h3>Bosch Serie 6</h3>
-<div class="price">21 499 ₴</div>
-<a href="#">Купити</a>
-</div>
+    <div class="section-header">
+        <h2>НОВІ НАДХОДЖЕННЯ</h2>
+        <a href="#">Переглянути всі</a>
+    </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1586208958839-06c17cacdf08?auto=format&fit=crop&w=600&q=80">
-<h3>Electrolux</h3>
-<div class="price">14 999 ₴</div>
-<a href="#">Купити</a>
-</div>
+    <div class="products-grid">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&w=600&q=80">
-<h3>LG No Frost</h3>
-<div class="price">29 999 ₴</div>
-<a href="#">Купити</a>
-</div>
+        <div class="product-card">
+            <span class="badge">НОВИНКА</span>
+            <button class="favorite">♡</button>
+            <img src="images/new-fridge.png" alt="Холодильник">
+            <h3>Холодильник</h3>
+            <p>від 24 999 ₴</p>
+        </div>
 
-</div>
+        <div class="product-card">
+            <span class="badge">НОВИНКА</span>
+            <button class="favorite">♡</button>
+            <img src="images/new-washing.png" alt="Пральна машина">
+            <h3>Пральна машина</h3>
+            <p>від 14 999 ₴</p>
+        </div>
 
+        <div class="product-card">
+            <span class="badge">НОВИНКА</span>
+            <button class="favorite">♡</button>
+            <img src="images/new-oven.png" alt="Духова шафа">
+            <h3>Духова шафа</h3>
+            <p>від 11 999 ₴</p>
+        </div>
+
+    </div>
+
+</section>
 <footer>
 
-<h2 style="color:#ffc107;margin-bottom:20px;">
-Побутова Техніка Баштанка
-</h2>
+    <div class="contacts">
 
-<div class="contact">
-📞 <a href="tel:+380980503885">+38 (098) 050-38-85</a>
-</div>
+        <div class="contact-item">
+            <img src="images/phone.png" alt="">
+            <div>
+                <h4>Телефон</h4>
+                <p>098 050 38 85</p>
+            </div>
+        </div>
 
-<div class="contact">
-📍 м. Баштанка, вул. Промислова, 30а
-</div>
+        <div class="contact-item">
+            <img src="images/viber.png" alt="">
+            <div>
+                <h4>Viber</h4>
+                <p>Написати</p>
+            </div>
+        </div>
 
-<div class="contact">
-💬 <a href="https://t.me/oleksii070" target="_blank">Telegram</a>
-</div>
+        <div class="contact-item">
+            <img src="images/telegram.png" alt="">
+            <div>
+                <h4>Telegram</h4>
+                <p>oleksii070</p>
+            </div>
+        </div>
 
-<div class="contact">
-📱 <a href="viber://chat?number=%2B380980503885">Viber</a>
-</div>
+        <div class="contact-item">
+            <img src="images/tiktok.png" alt="">
+            <div>
+                <h4>TikTok</h4>
+                <p>@technobashtanka</p>
+            </div>
+        </div>
 
-<div class="contact">
-🎵 <a href="https://www.tiktok.com/@technobashtanka" target="_blank">TikTok</a>
-</div>
+    </div>
 
 </footer>
+<nav class="bottom-nav">
+
+    <a href="#" class="active">
+        <span>🏠</span>
+        <p>Головна</p>
+    </a>
+
+    <a href="#">
+        <span>📦</span>
+        <p>Каталог</p>
+    </a>
+
+    <a href="#">
+        <span>🤍</span>
+        <p>Обране</p>
+    </a>
+
+    <a href="#">
+        <span>📋</span>
+        <p>Замовлення</p>
+    </a>
+
+    <a href="#">
+        <span>👤</span>
+        <p>Профіль</p>
+    </a>
+
+</nav>
+
+<script src="script.js"></script>
 
 </body>
 </html>

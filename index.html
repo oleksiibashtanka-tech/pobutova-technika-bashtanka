@@ -33,7 +33,25 @@ top:0;
 z-index:999;
 box-shadow:0 2px 20px rgba(0,0,0,.5);
 }
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
 
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffc107;
+}
 .logo{
 text-align:center;
 font-size:32px;
@@ -255,7 +273,12 @@ text-decoration:none;
 Баштанка
 
 </div>
-
+<nav class="navbar">
+    <a href="#">Головна</a>
+    <a href="#catalog">Каталог</a>
+    <a href="#about">Про нас</a>
+    <a href="#contacts">Контакти</a>
+</nav>
 </header>
 
 <section class="hero">

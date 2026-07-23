@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Ефект легкого кліку (зворотний зв'язок інтерфейсу)
+    // Ефект зворотного тактильного зв'язку при натисканні
     const allButtons = document.querySelectorAll(".contact-btn, .tiktok-main-btn");
     
     allButtons.forEach(btn => {
